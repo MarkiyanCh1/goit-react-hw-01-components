@@ -9,10 +9,10 @@ import {
 } from './Statistics.styles';
 import { colors } from 'randomColors';
 
-const Statistics = ({ stats }) => {
+const Statistics = ({ title, stats }) => {
   return (
     <Card>
-      <Title>Upload stats</Title>
+      {title && <Title>{title}</Title>}
       <StatList>
         {stats.map(({ id, label, percentage }) => (
           <Item
